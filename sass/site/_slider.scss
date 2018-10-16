@@ -1,0 +1,10 @@
+.slide-show {
+	width: 100%;
+	.slide {
+		// height: 100vh; // vh = viewport height / this is 100% height of viewport
+		height: 600px;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+}
