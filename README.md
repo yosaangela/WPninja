@@ -10,3 +10,4 @@ You can use WPninja as a starter theme for a WordPress theme you are building or
 # WPninja
 # WPninja
 # ninjaWP
+# WP_dashing
