@@ -8,14 +8,14 @@
  *
  * @package HeadLabNeo
  */
+?>
 
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
 <?php wp_head(); ?>
 </head>	
 
@@ -24,33 +24,18 @@
 
 	<header id="masthead" class="site-header <?php echo (is_front_page()) ? 'mb-0' : '' ;?>" role="banner">
 
-		
-	    <nav id="my-menu" class="navbar navbar-expand-lg">
-	    	<div class="container">
-				<div id="info-name">
-					<?php bloginfo('name'); ?>
-				</div>
-				<button id="menu-button">MENU</button>
+	<div class="custom-menu">
+		<?php 
+    		if ( has_custom_logo() ) {
+			    the_custom_logo();
+			} else { ?>
+			    <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+			<?php } ?>
 
-		   		<div class="collapse navbar-collapse" id="my-menu">
-	            <?php
-	            $args = array(
-	              'theme_location' => 'primary',
-	              'depth'      => 2,
-	              'container'  => false,
-	              'menu_class'     => 'navbar-nav',
-	              'walker'     => new Bootstrap_Walker_Nav_Menu()
-	              );
-	            if (has_nav_menu('primary')) {
-	              wp_nav_menu($args);
-	            }
-	            ?>
-	          </div>
-			
-	        
-		</nav>
-	
+			<?php headlab_menu('primary'); ?>
 
+			<a href="#" class="menu-button"><?php _e('MENU', 'headlab'); ?></a>
+	</div>
 
 	</header><!-- #masthead -->
 

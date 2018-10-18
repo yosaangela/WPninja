@@ -1,0 +1,24 @@
+.home-projects {
+	width: 100%;
+}
+
+.home-project { //i;ve set the thumbnail acctually. css never throws frontend errors
+	display: block;
+	width: 25%;
+	float: left;
+	height: 280px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	// let me show you
+
+	&:first-of-type {
+		background-color: $green;
+		color: $white;
+	}
+}
+
+.kolom {
+	float: left;
+}

@@ -10,11 +10,11 @@
 get_header(); ?>
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
-
+	<h1>hai its single</h1>
 				<?php
 				while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'template-parts/content', 'projects' );
 
 					the_post_navigation();
 
@@ -32,3 +32,4 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+

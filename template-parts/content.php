@@ -12,9 +12,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( has_post_thumbnail() && is_single() ) : ?>
+
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail('full', array('class' => 'rounded')); ?>
 		</div><!--  .post-thumbnail -->
+		
 		<?php else : ?>
 			<div class="post-thumbnail">
 		    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -22,11 +24,12 @@
 		    </a>
 		</div><!--  .post-thumbnail -->
 	<?php endif; ?>
-
+	
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
+
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;

@@ -2,22 +2,40 @@
 	margin-bottom: 3rem;
 }
 
-.home {
-	.navbar {
-		position: absolute;
-		z-index: 2;
-		width: 100%;
-		background: white;
+.custom-menu {
+	position: absolute;
+	top: 80px;
+	left: 0;
+	display: block;
+	@extend .clearfix;
+	z-index: 1000;
+	background-color: $white;
+
+	.menu-button {
+		font-weight: 600;
+		color: $white !important;
+		background-color: $green;
+		padding: 30px 30px !important;	
+		margin-left: 40px;
+		transition: $trans;
+
+		&:hover {
+			background-color: darken($green, 5%);
+			text-decoration: none;
+		}
 	}
 
-	#info-name {
-	position: relative;
-	padding: 20px;
-	top: 150px;
-	background-color: white;
-	z-index: 2;
-	width: 500px;
-	height: 70px;
+	a:not(.custom-logo-link) {
+		display: inline-block;
+		float: left;
+		color: $black;
+		padding: 30px 15px;	
+	}
+
+	.custom-logo-link {
+		width: 140px;
+		float: left;
+		margin-right: 40px;
 	}
 }
 

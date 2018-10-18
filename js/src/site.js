@@ -1,30 +1,18 @@
-(function ($) {
-	$(document).ready(function(){
-	  $('.slide-show').slick();
-	});
+jQuery(document).ready(function($){
 
 
-    $(document).ready(function() {
-      $("#my-menu").mmenu({
-         // options
-      }, {
-         // configuration
-         .my-menu: {
-            selected: "active";
-            vertical: "expand";
-         }
-      });
-   });
-    
-    $(document).ready(function() {
-      $("#my-menu").mmenu({
-         // Options
-      });
-      var API = $("#my-menu").data( "mmenu" );
-      
-      $("#my-button").click(function() {
-         API.open();
-      });
-   });
-})(jQuery);
+
+
+	  $('.slide-show').slick({
+	  	arrows: false,
+	  	dots: true,
+	  });
+
+
+
+
+
+});
+
+
 

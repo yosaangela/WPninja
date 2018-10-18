@@ -1,14 +1,3 @@
-<!-- <div class="slide-show">
-	<div><h1>This is Slider1</h1><span>you can swipe me</span></div>
-    <div><h1>This is Slider2</h1><span>you can swipe me</span></div>
-	<div><h1>This is Slider3</h1><span>you can swipe me</span></div>		  
-</div> -->
-
-<!--
-OK, so here we have HTML model of what we want from our slider, now we have to utilize repeater.
-
-
--->
 
 <?php
 

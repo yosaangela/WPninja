@@ -1,33 +1,35 @@
-<div class="container-fluid">	
-	<div class="row">	
-	<div id="telo" class="kolom">
-		<?php 
-			//the query
-			$args = array('post_type' => 'project', 'posts_per_page' => 6);
 
-			$the_query = new WP_Query( $args ); ?>
+<div class="home-projects">
+<!-- what i meant here just want to show the thumbnail. but then its error -->
+	<?php 
+		$args = array('post_type' => 'project', 'posts_per_page' => 7);
 
-			<?php if ( $the_query->have_posts() ) : ?>
+		// the query
+		$the_query = new WP_Query( $args ); ?>
 
-				<!-- the loop -->
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		<?php if ( $the_query->have_posts() ) : ?>
 
-					<div class="home-project">
-						<?php if(has_post_thumbnail()) { the_post_thumbnail(); } ?>
-					</div>
+			<a class="home-project" href="#ACF-url">
+				<h2>ACF title</h2>
+			</a>
 
-				 <?php endwhile; ?>
-				<!-- end of the loop -->
+			<!-- the loop -->
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-				<!-- pagination here -->
+			<a class="home-project" href="<?php the_permalink(); ?>" style="background-image: url(<?php echo get_post_image($post->ID); ?>);">
+				<h2><?php the_title(); ?></h2>
+			</a>
 
-				<?php wp_reset_postdata(); ?>
+			<?php endwhile; ?>
+			<!-- end of the loop -->
 
-			<?php else : ?>
-				<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			<?php endif; ?>
-	</div><!--.row -->
-</div><!--  .container -->
-</div>
+			<!-- pagination here -->
 
-<?php get_footer(); ?>
+			<?php wp_reset_postdata(); ?>
+
+		<?php else : ?>
+			<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>
+</div><!--.kolom -->
+
+

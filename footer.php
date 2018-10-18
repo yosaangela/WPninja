@@ -23,6 +23,14 @@
 						bloginfo( 'name' );
 						
 						 ?>
+
+			<div class="social-media">
+				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-tumblr"></i>
+				<i class="fab fa-google-plus-g"></i>
+				<i class="fab fa-youtube-square"></i>
+			</div>
+				
 			</div><!-- .site-info -->
 		</div><!--  .container -->
 	</footer><!-- #colophon -->
