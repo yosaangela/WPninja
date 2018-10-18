@@ -7160,7 +7160,16 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   z-index: 2;
   width: 100%;
-  background: transparent; }
+  background: white; }
+
+.home #info-name {
+  position: relative;
+  padding: 20px;
+  top: 150px;
+  background-color: white;
+  z-index: 2;
+  width: 500px;
+  height: 70px; }
 
 /*--------------------------------------------------------------
 ## Footer
@@ -7181,6 +7190,16 @@ a.text-dark:hover, a.text-dark:focus {
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat; }
+
+/*--------------------------------------------------------------
+## Projects
+--------------------------------------------------------------*/
+.home-project {
+  width: 25%;
+  float: left; }
+
+.kolom {
+  float: left; }
 
 .site-content {
   word-break: break-word; }

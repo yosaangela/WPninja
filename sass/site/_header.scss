@@ -7,10 +7,18 @@
 		position: absolute;
 		z-index: 2;
 		width: 100%;
-		background: transparent;
-		// Always make sure your files are as readable as possible, that includes propper
-		// indentation and spacing. noted that.
+		background: white;
+	}
+
+	#info-name {
+	position: relative;
+	padding: 20px;
+	top: 150px;
+	background-color: white;
+	z-index: 2;
+	width: 500px;
+	height: 70px;
 	}
 }
 
-		
+

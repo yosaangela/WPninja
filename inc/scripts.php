@@ -18,6 +18,14 @@ function headlab_scripts() {
 
 	wp_enqueue_script( 'site-js', get_stylesheet_directory_uri() . '/js/src/site.js', array('jquery'), '0.0.1', true );
 
+	/* MOBILE MENU -- MMENU */
+	wp_enqueue_script( 'mmenu-style', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.css', array('jquery'), '1.0.1', true );
+
+	wp_enqueue_script( 'mmenu-jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.js', array('jquery'), '1.0.2', true );
+
+	wp_enqueue_script( 'wrapper-mmenu', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/wrappers/bootstrap/jquery.mmenu.bootstrap4.js', array('jquery'), '1.0.3', true );
+	
+
 	// Font Awesome JS implementation.
 	wp_enqueue_script( 'headlab-fa', '//use.fontawesome.com/releases/v5.0.1/js/all.js', array(), '5.0.1' );
 

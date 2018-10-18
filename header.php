@@ -23,14 +23,16 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header <?php echo (is_front_page()) ? 'mb-0' : '' ;?>" role="banner">
-	    <nav class="navbar navbar-expand-lg">
+
+		
+	    <nav id="my-menu" class="navbar navbar-expand-lg">
 	    	<div class="container">
+				<div id="info-name">
+					<?php bloginfo('name'); ?>
+				</div>
+				<button id="menu-button">MENU</button>
 
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-
-		   		<div class="collapse navbar-collapse" id="navbarNav">
+		   		<div class="collapse navbar-collapse" id="my-menu">
 	            <?php
 	            $args = array(
 	              'theme_location' => 'primary',
@@ -44,9 +46,10 @@
 	            }
 	            ?>
 	          </div>
-
-	        </div>
+			
+	        
 		</nav>
+	
 
 
 	</header><!-- #masthead -->
