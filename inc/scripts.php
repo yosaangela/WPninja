@@ -4,6 +4,8 @@
  */
 function headlab_scripts() {
 	wp_enqueue_style( 'headlab-style', get_stylesheet_directory_uri() . '/style.min.css', array(), '1.0.0' );
+	//font awesome css
+	wp_enqueue_style( 'headlab-fa-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '1.2.0' );
 
 	wp_enqueue_script( 'headlab-js', get_template_directory_uri() . '/js/dist/scripts.min.js', array('jquery'), ' ', true );
 

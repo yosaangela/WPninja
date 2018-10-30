@@ -1,0 +1,152 @@
+.home-news-section {
+   .clearfix {
+   	    max-width: 85%;
+		
+   h2 {
+	  color: darken($green, 6%);
+	  font-size: 3rem;
+	  margin-top: 3rem;
+	  margin-left: 16rem;
+	  margin-bottom: -10px;
+	  font-weight: 700;
+   }
+
+// first you style common things for odd and even eements, like BG color, color etc
+// and than you target nth-of-type eements and style unique things for odd and even. 
+// is it allin .home-newa item class? ok. on the looping. oke.
+
+   .home-news-item {
+		display: flex;
+		justify-content: center;
+		align-item: center;
+		margin: 2rem;
+		width: 80%;
+		margin-left: 8rem;
+
+		&:nth-of-type(odd) {
+			.home-news-item-image {
+			   max-width: 35%;
+			   position: relative;
+					img {
+						position: relative;
+						width: 250px;
+						height: 250px;
+					}
+					p {
+						position: absolute;
+						text-align: center;
+						background-color: white;
+						color: darken($green, 6%);
+						left: 20%;
+						bottom: 3px;
+						padding:3px;
+					}
+			}
+
+			.home-news-item-content {
+				background-color: $green;
+				color: white;
+				max-width: 45%;
+				  h5 {
+					padding: 1rem;
+				  }
+				  p {
+					padding: 1rem;
+				  }
+				  .right-arrow {
+					background-image: url('images/right-arrow.png');
+					z-index: 1001;
+					width: 100px;
+				    height: 43px;
+				    background-position: center;
+				    background-size: contain;
+				    display: inline-block;
+				    float: right;
+				    background-repeat: no-repeat;
+				  }
+		
+		    }
+	}
+
+
+		&:nth-of-type(even) {
+			.home-news-item-image {
+			   overflow: auto;
+			   position: inherit;
+			   max-width: 35%;
+			   float: right;
+					img {
+						width: 250px;
+						height: 250px;
+						float: right;
+						position: absolute;
+					    margin-left: 25.5rem;
+					}
+
+					p {
+						position: absolute;
+						text-align: center;
+						background-color: white;
+						color: darken($green, 6%);
+					    left: 51rem;
+					    padding: 3px;
+					    top: 164rem;
+
+
+					}
+			}
+
+			.home-news-item-content {
+				max-width: 45%;
+				background-color: $green;
+				color: white;
+				float: left;
+				position: relative;
+				margin-right: 16rem;
+				
+				p {
+					padding: 1rem;
+					height: 45%;
+				}
+
+				 h5 {
+					padding: 1rem;
+				  }
+				  .right-arrow {
+					background-image: url('images/left-arrow.png');
+					z-index: 1001;
+					width: 100px;
+				    height: 43px;
+				    background-position: center;
+				    background-size: contain;
+				    display: inline-block;
+				    float: left;
+				    background-repeat: no-repeat;	
+				  }
+			}
+		}
+		  	
+
+
+		}
+	
+
+	.home-news-btn {
+		position: relative;
+		align-self: center;
+		margin-right: 65%;
+		padding: 4px;
+		border: 2px solid darken($green, 6%);
+		color: darken($green, 6%);
+		left: 12rem;
+		top: -2rem;
+		margin: 2rem;
+		color: darken($green, 6%);
+
+		a {
+			color: darken($green, 6%);
+		}
+	}
+    
+    }
+}

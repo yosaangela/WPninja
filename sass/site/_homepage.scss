@@ -1,0 +1,78 @@
+/**
+* About section
+*/
+.about-section {
+	width: 100%;
+	padding: 40px 0;
+	background-image: url(images/background_about_section.jpg); 
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center bottom;
+
+	h3 { 
+		font-size: 2.75rem;
+		@extend .clearfix;
+
+		span {
+			color: $green;
+			display: inline-block;
+			width: 25%;
+			text-align: center;
+			float: left;
+			border-right: 2px solid $gray-200;
+			padding: 1.5rem;
+
+			&:last-child {
+				border: none;
+			}
+		}
+
+	}	
+
+	.box-info {
+		background-color: darken($green, 5%);
+		position: relative;
+		//float: center;
+		margin: 0 auto;
+		color: white;
+		text-align: center;
+		width: 60%;
+		margin-left: 20%;
+		margin-top: 10%;
+		padding: 1.5em;
+		font-size: 1.1rem;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			/* down here for css triangle */
+			width: 0; 
+			height: 0; 
+			border-left: 30px solid transparent;
+			border-right: 30px solid transparent;
+			border-top: 30px solid darken($green, 5%);
+			margin-top: 20px;
+			margin-left: -2rem;
+			// Nice solution for arrow.
+		}
+	}
+
+	.end-of-about-section {
+		text-align: center;
+
+		h2 {
+			color: darken($green, 5%);
+			font-size: 4rem;
+			margin-top: 4rem;
+			margin-bottom: 2rem;
+			//font-weight: $900; // or Jeez, my brain is cracking
+			font-weight: $bold;
+		}
+		a {
+			color: black;
+			font-size: 20px;
+			@extend .font-weight-bold;
+		}
+	}
+	
+}

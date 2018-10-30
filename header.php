@@ -20,23 +20,30 @@
 </head>	
 
 <body <?php body_class(); ?>>
+
+
 <div id="page" class="site">
+	
+	<?php include get_stylesheet_directory() . '/includes/main-menu.php'; ?>
 
 	<header id="masthead" class="site-header <?php echo (is_front_page()) ? 'mb-0' : '' ;?>" role="banner">
+	
+		<div id="cust-menu" class="custom-menu">
 
-	<div class="custom-menu">
-		<?php 
-    		if ( has_custom_logo() ) {
-			    the_custom_logo();
-			} else { ?>
-			    <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-			<?php } ?>
+			<div class="custom-menu-inner clearfix">
+				<?php 
+		    		if ( has_custom_logo() ) {
+					    the_custom_logo();
+					} else { ?>
+					    <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				<?php } ?>
 
-			<?php headlab_menu('primary'); ?>
-
-			<a href="#" class="menu-button"><?php _e('MENU', 'headlab'); ?></a>
-	</div>
-
+				<?php headlab_menu('primary'); ?>
+			</div>
+	
+			<a href="#" id="menu-trigger"><?php _e('MENU', 'headlab');?></a> 
+			<!-- menu button, when user click this... -->
+		</div><!-- custom menu-->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

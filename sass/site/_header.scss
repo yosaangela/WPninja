@@ -9,20 +9,11 @@
 	display: block;
 	@extend .clearfix;
 	z-index: 1000;
-	background-color: $white;
 
-	.menu-button {
-		font-weight: 600;
-		color: $white !important;
-		background-color: $green;
-		padding: 30px 30px !important;	
-		margin-left: 40px;
-		transition: $trans;
-
-		&:hover {
-			background-color: darken($green, 5%);
-			text-decoration: none;
-		}
+	.custom-menu-inner {
+		background-color: $white;
+		padding-right: 20px;
+		float: left;
 	}
 
 	a:not(.custom-logo-link) {
@@ -37,6 +28,124 @@
 		float: left;
 		margin-right: 40px;
 	}
+	
+
+	a#menu-trigger {
+		display: block;
+		float: left;
+		font-weight: 600;
+		color: $white !important;
+		background-color: $green;
+		padding: 30px 30px !important;	
+		margin-left: 10px;
+		transition: $trans;
+
+		&:hover {
+			background-color: darken($green, 5%);
+			text-decoration: none;
+		}
+	}
+}
+
+#menu-overlay { 
+	overflow-y: auto;
+	display: inline-block;
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	height: auto;
+	width: 100%;//
+    position: fixed;//
+	// trbl
+	top: -20px;
+	right: 0;
+	bottom: 20px;
+	left: 0;
+	padding: 40px;
+	background-color: white;
+	z-index: 1001;
+	transition: all 350ms ease-in-out;
+
+	img {
+	   width: 140px;
+		float: left;
+		margin-right: 40px;	
+		margin-top: -1rem;
+	}
+
+	h2 {
+		font-weight: 400;
+		font-size: 24px;
+	}
+
+	a:hover, a:focus {
+    color: lighten($green, 8%);
+    margin-left: 20px;
+    }
+
+	// now the juice :))
+	&.menu-visible {
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+		bottom: 0;
+		position: fixed;
+	}
+	
+	.positionFixed {
+		position: fixed;
+	}
+
+	.row {
+        font-size: 2rem;
+        font-weight: 500;
+	    margin-top: 4rem;
+	    margin-left: 4rem;	
+
+	}
+
+
+	> div > div > div {
+		border: 4px solid darken($green, 6%);
+		margin: 2rem;
+
+		@include make-col-ready();
+		
+		@include media-breakpoint-up(xs) {
+		   @include make-col(6);
+		}
+		
+		@include media-breakpoint-up(sm) {
+		   @include make-col(4);
+		}
+		
+		@include media-breakpoint-up(md) {
+		   @include make-col(3);
+		}
+	}
+
+	.close-menu { // this one is first next child element
+	    position: absolute;
+	    top: 30px;
+	    right: 30px;
+	    display: block;
+	    width: 30px;
+	    height: 30px;
+	    background-image: url(images/close.svg);
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    background-position: center center;
+	    z-index: 1001;
+	    cursor: pointer;
+	}
+
+	a {
+		display: block;
+		color: darken($green, 8%);
+		text-decoration: none;
+	}
+
+
 }
 
 

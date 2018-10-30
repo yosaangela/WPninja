@@ -1,0 +1,39 @@
+.news-item {
+	margin-top: 10rem;
+	h2 {
+		margin-top: 10rem;
+	}
+
+	.news-item-image {
+
+			img {
+				position: relative;
+				width: 250px;
+				height: 250px;
+			}
+	}
+
+	.news-item-content {
+		background-color: $green;
+		color: white;
+		max-width: 45%;
+		  h5 {
+			padding: 1rem;
+		  }
+		  p {
+			padding: 1rem;
+		  }
+		  .right-arrow {
+			background-image: url('images/right-arrow.png');
+			z-index: 1001;
+			width: 100px;
+		    height: 43px;
+		    background-position: center;
+		    background-size: contain;
+		    display: inline-block;
+		    float: right;
+		    background-repeat: no-repeat;
+		  }
+
+    }
+}

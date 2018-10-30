@@ -2,20 +2,80 @@
 	width: 100%;
 }
 
-.home-project { //i;ve set the thumbnail acctually. css never throws frontend errors
-	display: block;
+.home-project:hover .home-projects {
+  transform: rotateY(180deg);
+}
+
+.home-project { 
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	width: 25%;
 	float: left;
 	height: 280px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
+	color: $white;
+	z-index: 1;
+	transition: $trans;
 
-	// let me show you
+	&:hover {
+		text-decoration: none;
+
+		h2 {
+			background-color: $white;
+			color: $green;
+			box-shadow: 0 0 1px rgba($black, .6);
+		}
+
+		&::after {
+			opacity: 0;
+		}
+	}
 
 	&:first-of-type {
 		background-color: $green;
 		color: $white;
+
+		&:hover {
+			text-decoration: none;
+			background-color: darken($green, 2%);
+
+			h2 {
+				background-color: transparent;
+				color: $white;
+			}
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		display: inline-block;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba($black, .5);
+		z-index: -1;
+		transition: $trans;
+	}
+
+	h2 {
+		width: 75%;
+		font-size: 1.1rem;
+		font-weight: 600;
+		padding: 30px;
+		border-radius: $bdrs;
+		text-align: center;
+		transition: $trans;
 	}
 }
 

@@ -16,6 +16,15 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
+			<ul class="social-media">
+				<div class="form-mail">
+				<?php  echo do_shortcode('[mc4wp_form id="1487"]');?>
+				</div>
+				<li><i class="fab fa-facebook-f"></i></li>
+				<li><i class="fab fa-tumblr"></i></li>
+				<li><i class="fab fa-google-plus-g"></i></li>
+				<li><i class="fab fa-youtube"></i></li>
+			</ul>
 			<div class="site-info">
 				&copy; <?php echo "Copyright"; 
 						echo date("Y"); 
@@ -23,13 +32,6 @@
 						bloginfo( 'name' );
 						
 						 ?>
-
-			<div class="social-media">
-				<i class="fab fa-facebook-f"></i>
-				<i class="fab fa-tumblr"></i>
-				<i class="fab fa-google-plus-g"></i>
-				<i class="fab fa-youtube-square"></i>
-			</div>
 				
 			</div><!-- .site-info -->
 		</div><!--  .container -->

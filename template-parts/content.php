@@ -12,7 +12,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( has_post_thumbnail() && is_single() ) : ?>
-
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail('full', array('class' => 'rounded')); ?>
 		</div><!--  .post-thumbnail -->
@@ -26,6 +25,7 @@
 	<?php endif; ?>
 	
 	<header class="entry-header">
+
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );

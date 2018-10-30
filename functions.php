@@ -87,6 +87,23 @@ function themename_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
 }
 
+
+// function add_theme_option() {
+
+// 		if( !function_exists('acf_add_options_page') ) return;
+
+// 		$option_page = acf_add_options_page(array(
+// 			'page_title'  => __('Theme Settings', 'theme_starter'),
+// 			'menu_title'  => __('Theme Settings', 'theme_starter'),
+// 			'parent_slug' => 'themes.php',
+// 			'menu_slug'   => 'theme-settings',
+// 			'capability'  => 'manage_options',
+// 		));
+
+// 	}
+// add_action('acf/init', 'add_theme_option', 10);
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

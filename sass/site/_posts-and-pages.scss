@@ -18,7 +18,9 @@
 }
 
 .post-thumbnail {
-	margin-bottom: 1em;
+    margin-bottom: 1em;
+    width: 250px;//
+    height: 250px;//
 }
 
 .entry-meta,
@@ -75,6 +77,45 @@
 		@include make-col-ready();
 		@include make-col(12);	
 	}
+}
+
+.content-area {
+  .single_page {
+    margin-top: 10rem;
+    justify-content: center;
+    width: 80%;
+      span {
+        font-weight: 500;
+        text-align: center;
+        font-size: 3rem;
+        text-align: justify;
+        width: 100%;
+
+        a:hover, a:focus {
+          margin-left: 4px;
+
+        }
+      }
+      h2 {
+        margin-top: 10rem;
+      }
+
+      p {
+        display: block;
+        text-alignment: center;
+        font-wight: 400;
+        font-size: 18px;
+      }
+      .post-thumbnail {
+          img {
+            display: block;
+              width: 150px;
+              height: 200px;
+              justify-content: center;
+          }
+      }
+
+  }
 }
 
 

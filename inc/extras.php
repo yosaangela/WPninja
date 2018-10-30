@@ -117,3 +117,63 @@ $queried_page_id = get_queried_object_id();
     echo '<a href="'. esc_url( $menu_nav->url ) .'" '. $active .' title="'. esc_html( $menu_nav->title ) .'">'. esc_html( $menu_nav->title ) .'</a>';
   }
 }
+
+/**
+* To get A cutom link to show in the menu
+* 
+*/
+function custom_link ($id) {
+$menuLocations = get_nav_menu_locations();
+}
+
+/* 
+ * Custom excerpt --USE EG. echo content(15); or echo excerpt(15);
+ * Returns content or excerpt stripped of all tags.
+ * Can be used as an excerpt
+ */
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).' ...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+  $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+  $excerpt = strip_tags($excerpt);
+  return $excerpt;
+}
+ 
+function content($limit) {
+  $content = explode(' ', get_the_content(), $limit);
+  if (count($content)>=$limit) {
+    array_pop($content);
+    $content = implode(" ",$content).' ...';
+  } else {
+    $content = implode(" ",$content);
+  } 
+  $content = preg_replace('/\[.+\]/','', $content);
+  $content = apply_filters('the_content', $content); 
+  $content = str_replace(']]>', ']]&gt;', $content);
+  $content = strip_tags($content);
+  return $content;
+}
+
+
+if( function_exists('acf_add_options_page') ) {
+  
+  acf_add_options_page(array(
+    'page_title'  => 'Theme General Settings',
+    'menu_title'  => 'Theme Settings',
+    'menu_slug'   => 'theme-settings',
+    'capability'  => 'edit_posts',
+    'redirect'    => false
+  ));
+  
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Theme Header Settings',
+    'menu_title'  => 'Yosa',
+    'parent_slug' => 'theme-settings',
+  ));
+  
+}
