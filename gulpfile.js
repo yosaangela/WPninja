@@ -1,7 +1,7 @@
 // Load all the modules from package.json
 var gulp = require( 'gulp' ),
   plumber = require( 'gulp-plumber' ),
-  autoprefixer = require('gulp-autoprefixer'),
+  autoprefixer = require('gulp-autoprefixer'), 
   watch = require( 'gulp-watch' ),
   jshint = require( 'gulp-jshint' ),
   stylish = require( 'jshint-stylish' ),

@@ -19,8 +19,8 @@
 
 .post-thumbnail {
     margin-bottom: 1em;
-    width: 250px;//
-    height: 250px;//
+    width: 100%;
+    height: 250px;
 }
 
 .entry-meta,
@@ -79,44 +79,59 @@
 	}
 }
 
-.content-area {
-  .single_page {
-    margin-top: 10rem;
-    justify-content: center;
-    width: 80%;
-      span {
-        font-weight: 500;
-        text-align: center;
-        font-size: 3rem;
-        text-align: justify;
+.content-area-full {
+  margin-top: -50px; 
+  .single-about {
+      width: 100%;
+
+      .about-container {
+        width: 80%;
+        margin: 0 auto 2rem auto;
+      }
+
+      .page-thumbnail {
         width: 100%;
-
-        a:hover, a:focus {
-          margin-left: 4px;
-
+        margin-bottom: 2rem;
+        background-size: cover;
+        img {
+          width: 100%;
+          height: 360px;
+          object-fit: cover;
         }
       }
-      h2 {
-        margin-top: 10rem;
-      }
-
-      p {
-        display: block;
-        text-alignment: center;
-        font-wight: 400;
-        font-size: 18px;
-      }
-      .post-thumbnail {
-          img {
-            display: block;
-              width: 150px;
-              height: 200px;
-              justify-content: center;
-          }
-      }
-
-  }
+        h2{
+          font-weight: 400;
+          font-weight: 600;
+          font-size: 38px;
+        }
+    }
 }
 
+.content-area-full{
+  margin-top: -50px;
+    .site-content{
+      width: 100%;
+        .page-container {
+          width: 80%;
+          margin: 0 auto 2rem auto;
+        }
+        .page-thumbnail {
+          width: 100%;
+          width: 100%;
+          margin-bottom: 2rem;
+          background-size: cover;
+             img {
+              width: 100%;
+              height: 360px;
+              object-fit: cover;
+             }
+        }
 
+        h2 {
+           font-weight: 400;
+          font-weight: 600;
+          font-size: 38px;
+        }
+    }
 
+}

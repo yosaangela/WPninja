@@ -21,7 +21,6 @@
 
 <body <?php body_class(); ?>>
 
-
 <div id="page" class="site">
 	
 	<?php include get_stylesheet_directory() . '/includes/main-menu.php'; ?>
@@ -33,8 +32,9 @@
 			<div class="custom-menu-inner clearfix">
 				<?php 
 		    		if ( has_custom_logo() ) {
-					    the_custom_logo();
-					} else { ?>
+					    the_custom_logo(); ?>
+					   <span>Mullerafbouwgroep</span>
+					<?php } else { ?>
 					    <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<?php } ?>
 
@@ -42,13 +42,13 @@
 			</div>
 	
 			<a href="#" id="menu-trigger"><?php _e('MENU', 'headlab');?></a> 
-			<!-- menu button, when user click this... -->
+
 		</div><!-- custom menu-->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
 	<?php 
-	(is_front_page()) ? $container = 'container-fluid' : $container = 'container';
+	(is_front_page() || is_page(1086) /* About us */) ? $container = 'container-fluid' : $container = 'container-fluid'; ///:)))
 	?>
 
 	<div class="<?php echo $container;?>">

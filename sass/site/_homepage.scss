@@ -10,8 +10,9 @@
 	background-position: center bottom;
 
 	h3 { 
-		font-size: 2.75rem;
 		@extend .clearfix;
+		font-size: 2.5rem;
+    	font-weight: 700;
 
 		span {
 			color: $green;
@@ -32,7 +33,6 @@
 	.box-info {
 		background-color: darken($green, 5%);
 		position: relative;
-		//float: center;
 		margin: 0 auto;
 		color: white;
 		text-align: center;

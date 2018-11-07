@@ -1,10 +1,12 @@
 jQuery(document).ready(function($){
 	$('.slide-show').slick({
 	  	arrows: false,
-	  	dots: true,
+		dots: true,
+		infinite: true,
+		autoplay:true,
+		autoplaySpeed:900
 	});
 
-	// Let's shave some lines of code here. :)))yaa!! show me
 	$('#menu-trigger').click(function(event) {
 		event.preventDefault();
 		// Prevents default behavior and DOM bubbling.
@@ -17,7 +19,4 @@ jQuery(document).ready(function($){
 	});
 
 });
-
-
-
 

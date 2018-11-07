@@ -9,11 +9,27 @@
 	display: block;
 	@extend .clearfix;
 	z-index: 1000;
-
+	
 	.custom-menu-inner {
 		background-color: $white;
 		padding-right: 20px;
 		float: left;
+		display: inline-block;
+
+		span {
+		    font-size: large;
+			font-weight: 700;
+			color: darken($green, 6%);
+			position: absolute;
+			top: 50px;
+			left: 20px;
+		}
+		img {
+		    width: 60%;
+		    position: relative;
+		    left: 4rem;
+		    top: 4px;
+		}
 	}
 
 	a:not(.custom-logo-link) {
@@ -26,7 +42,7 @@
 	.custom-logo-link {
 		width: 140px;
 		float: left;
-		margin-right: 40px;
+		margin-right: 6rem;
 	}
 	
 
@@ -45,7 +61,7 @@
 			text-decoration: none;
 		}
 	}
-}
+} //custom-menu
 
 #menu-overlay { 
 	overflow-y: auto;
@@ -65,14 +81,19 @@
 	background-color: white;
 	z-index: 1001;
 	transition: all 350ms ease-in-out;
-
+	
 	img {
 	   width: 140px;
 		float: left;
 		margin-right: 40px;	
 		margin-top: -1rem;
 	}
-
+	
+	h3 {
+		color: darken($green, 8%);
+		font-weight: 700;
+		padding: 2px;
+	}
 	h2 {
 		font-weight: 400;
 		font-size: 24px;
@@ -80,7 +101,7 @@
 
 	a:hover, a:focus {
     color: lighten($green, 8%);
-    margin-left: 20px;
+    background-color: darken($green, 2%);
     }
 
 	// now the juice :))
@@ -106,7 +127,7 @@
 
 
 	> div > div > div {
-		border: 4px solid darken($green, 6%);
+		
 		margin: 2rem;
 
 		@include make-col-ready();
@@ -144,8 +165,6 @@
 		color: darken($green, 8%);
 		text-decoration: none;
 	}
-
-
-}
+}//end-of-menu-overlay
 
 

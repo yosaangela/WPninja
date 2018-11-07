@@ -6,23 +6,26 @@
  *
  * @package stanleywp
  */
-?>
+ get_header(); 
+ ?>
 
-<?php //$project_items = get_theme_mod( 'project_items', '4' ); // what is this? its using plugin, so, actually its malfunction. We dont need that.
-// Use this for single project page, you dont need that for homepage. Let me show you
-?>
+<div id="primary" class="content-area-full">
+	<div class="single-about" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+		<?php if ( has_post_thumbnail() ): ?>
+			<div class="page-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div><!--  .post-thumbnail -->
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-'. $project_items); ?>>
-			<?php if ( has_post_thumbnail() ) : ?>
-			<div class="row">
-			<div id="telo" class="kolom">
-					   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					   <?php the_post_thumbnail() ?>
-					   </a>
-					</div><!--  .post-thumbnail -->
-				<?php endif;?>
+		<?php endif; ?>
+
+		<div class="about-container">
+			<h2 class="about-title"><?php the_title(); ?></h2>
+			<div class="about-content">
+				<?php the_content(); ?>
 			</div>
-			</div>
+		</div>
+	</div><!-- #post-## -->
+</div>
 
-</article><!-- #post-## -->
+<?php get_footer(); ?>

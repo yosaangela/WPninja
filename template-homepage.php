@@ -12,7 +12,7 @@
 	<?php endif; ?>
 	<?php include get_stylesheet_directory() . '/includes/homepage.php'; ?>
 	<?php include get_stylesheet_directory() . '/includes/projects.php'; ?>
-	<?php include get_stylesheet_directory() . '/includes/news.php'; ?>
+	<?php include get_stylesheet_directory() . '/includes/news.php'; ?> 
 
 <?php 
 get_footer();

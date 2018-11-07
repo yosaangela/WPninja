@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="news-section">
 	<div class="container clearfix">
 		<div class="row">
-			  <h2>Nieuws</h2> 
+			  <h2>Nieuws, is this page news?</h2> 
 
 			    <?php 
 				$args = array(

@@ -13,22 +13,23 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="single-page" role="main">
+	<div id="primary" class="content-area-full">
+		<main class="single-about">
 			<?php
-
 			while(have_posts()) : the_post(); ?>
-
-			<span><?php the_title(); ?></span>
-			
 			<?php
 			if ( has_post_thumbnail()): ?>
-			<div class="post-thumbnail">
+			<div class="page-thumbnail">
 				<?php the_post_thumbnail(); ?>
-			</div><!--  .post-thumbnail -->
-			<?php 
-			the_content();
+			</div>
+			
+			<div class="about-container">
+				<h2 class="about-title"><?php the_title(); ?></h2>
+				<div class="about-content">
+					<?php the_content(); ?>
+				</div>
+			</div> <!--  .about-container -->
+			<?php
 			endif;
 			?>
 			
@@ -36,6 +37,7 @@ get_header(); ?>
 
 		</main><!-- #main-->
 	</div><!-- #primary --> 
+
 
 <?php get_footer(); ?>
 
