@@ -33,6 +33,7 @@
 						
 						 ?>
 				
+				<span>Designed and developed by Wappstars</span>
 			</div><!-- .site-info -->
 		</div><!--  .container -->
 	</footer><!-- #colophon -->

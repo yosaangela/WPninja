@@ -1,7 +1,7 @@
 <div class="home-news-section">
 	<div class="container">
 		<div class="row">
-			 <!--  <h2 class="subtitle"><span>Nieuws</span></h2> -->
+		   <h2 class="subtitle"><span>Nieuws</span></h2>
 				<?php 
 			  		$page_news = get_page_by_path('news');
 			  		$news_url = $page_news ? get_permalink($page_news): '';
@@ -30,7 +30,7 @@
 							<a href="<?php the_permalink(); ?>" ><span class="sr-only">Read more</span></a>
 						</div>
 
-					</div><!-- .home-news-item -->
+					</div><!--home-news-item -->
 
 				</div> <!-- /.home-news-item-wrapper end -->
 

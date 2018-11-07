@@ -5,16 +5,6 @@
     background-color:#151414;
 }
 
-// .social-media{
-// 	svg {
-// 	float:right;
-// 	display: inline;
-// 	width: 5em;
-// 	height:5em;
-// 	background-color: green;
-// 	color:white;
-// 	}
-
 .social-media{    
 	top: 0;
 	right: 0;
@@ -36,6 +26,7 @@
  .svg{
  	margin: 2px;
  }
+
 .social-media li {
 	padding:  3px;
 	background-color: green;
@@ -46,9 +37,12 @@
 	width: 40px;
 	margin-right: 2px;
 }
-/**
- * Override the colors of the FontAwesome icons to be appropriate for the
- * social network.
- */
-.social-media li  .fa-facebook-square { color: #3e5b98; }
-.social-media li  .fa-twitter-square { color: #4da7de; }
+
+.site-info {
+	padding: 20px 0;
+	font-size: 13px;
+	font-weight: 500;
+	span {
+		float: right;
+	}
+}

@@ -1,8 +1,37 @@
 .home-news-section {
-	 counter-reset: news-counter;
-	// value in padding and margin goes always TBL - Top Bottom Right Left, or in this case TB RLok
-	padding: 60px 0;
+	 counter-reset: news-counter; 
+	padding: 60px 0; //TB -LF
 	width: 100%;
+   
+    .subtitle {
+		h2 {
+			font-size: 20px;
+			font-weight: 800;
+			color: darken($green, 6%);
+	    }
+			
+		    span {
+	        display: inline-block;
+	        vertical-align: baseline;
+	        display: inline;
+	        position: relative;
+	        padding: 0 80px;
+			color: darken($green, 6%);
+			font-size: 50px;
+			font-weight: 700;
+
+		        &:before, &:after {
+		            content: '';
+		            display: block;
+		            width: 150px;
+		            position: absolute;
+		            top: 0.73em;
+		            left: 300px;
+		            border-top: 3px solid black;
+		        }
+		    }
+	     
+ 	}
 
 	.home-news-item-wrapper {
 	 counter-increment: news-counter;
@@ -135,14 +164,18 @@
 	.home-news-btn {
 		width: 100%;
 		margin-top: 30px;
+	   &::hover {
+				background-color: darken($green, 6%);
+			}
 
 		> a {
 			display: inline-block;
-			color: $green;
+			color: darken($green, 6%);
 			padding: 10px 25px;
-			border: 1px solid $green;
+			border: 1px solid darken($green, 6%);
 			position: relative;
-
+			
+			
 			&::after {
 				position: absolute;
 				content: '';
@@ -155,8 +188,7 @@
 				z-index: 1;
 			}
 
-			&::before { // this double "::" is it different with ":" ?
-			// some automation scripts accept : but general agreement on the web is :: for pseudo-elements and : for pseudo classes;
+			&::before { 
 				position: absolute;
 				display: inline-block;
 				content: '';
@@ -168,5 +200,6 @@
 				z-index: 2;
 			}
 		}
+
 	}
 }

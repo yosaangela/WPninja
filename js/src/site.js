@@ -3,8 +3,8 @@ jQuery(document).ready(function($){
 	  	arrows: false,
 		dots: true,
 		infinite: true,
-		autoplay:true,
-		autoplaySpeed:900
+		// autoplay:true,
+		// autoplaySpeed:900
 	});
 
 	$('#menu-trigger').click(function(event) {

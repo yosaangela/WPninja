@@ -15,9 +15,9 @@
 get_header(); ?>
 
 <div class="news-section">
-	<div class="container clearfix">
+	<div class="container">
 		<div class="row">
-			  <h2>Nieuws, is this page news?</h2> 
+			  <h2><hr>Nieuws</h2></h2>
 
 			    <?php 
 				$args = array(
@@ -28,19 +28,23 @@ get_header(); ?>
 				while ( $loop->have_posts() ) : $loop->the_post();
 					
 			    ?>	
-
-				<div class="news-item"><!-- parent -->
-					<div class="news-item-image">
-						<?php the_post_thumbnail();?>
+				<div class="home-news-item-wrapper">
+					<div class="news-item"><!-- parent -->
+						<div class="news-item-image">
+							<?php the_post_thumbnail();?>
+						</div>
+						<div class="news-item-content"> 
+							<h5><?php the_title(); ?></h5>
+							<p><?php echo content(30); ?></p>
+							<a class="right-arrow" href="<?php the_permalink(); ?>" ><span class="sr-only">Read more</span></a>
+						</div>
+						
 					</div>
-					<div class="news-item-content"> 
-						<h5><?php the_title(); ?></h5>
-						<p><?php echo content(30); ?></p>
-						<a class="right-arrow" href="<?php the_permalink(); ?>" ><span class="sr-only">Read more</span></a>
-					</div>
-					
-				</div>
+			    </div> <!--  .home-news-item-wrapper -->
 			<?php endwhile; ?>
+			<?php else : ?>
+				<?php esc_html_e('Sorry, we hav no post for now :)'); ?>
+
 			<?php endif; ?>
 		
 		</div>
