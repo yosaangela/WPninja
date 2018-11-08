@@ -29,9 +29,10 @@
 
 .social-media li {
 	padding:  3px;
-	background-color: green;
+	background-color: lighten($green, 2%);
 	display: inline-block;
-	font-size: 30px;
+	font-size: 25px;
+	font-weight: 400;
 	text-align: center;
 	height: 50px;
 	width: 40px;

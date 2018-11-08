@@ -10,6 +10,10 @@
 	@extend .clearfix;
 	z-index: 1000;
 	
+	a:hover, a:focus {
+	  text-decoration: none;
+	  font-weight: 600;
+    }
 	.custom-menu-inner {
 		background-color: $white;
 		padding-right: 20px;
@@ -100,7 +104,7 @@
 	}
 
 	a:hover, a:focus {
-    color: lighten($green, 8%);
+    color: white;
     background-color: darken($green, 2%);
     }
 

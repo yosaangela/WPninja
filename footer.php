@@ -20,10 +20,10 @@
 				<div class="form-mail">
 				<?php  echo do_shortcode('[mc4wp_form id="1487"]');?>
 				</div>
-				<li><i class="fab fa-facebook-f"></i></li>
-				<li><i class="fab fa-tumblr"></i></li>
-				<li><i class="fab fa-google-plus-g"></i></li>
-				<li><i class="fab fa-youtube"></i></li>
+				<li>f</li>
+				<li>t</li>
+				<li>g<sup>+</sup></li>
+				<li>yt</li>
 			</ul>
 			<div class="site-info">
 				&copy; <?php echo "Copyright"; 
