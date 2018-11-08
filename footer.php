@@ -16,23 +16,26 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-			<ul class="social-media">
+			<div class="news-social">
 				<div class="form-mail">
 				<?php  echo do_shortcode('[mc4wp_form id="1487"]');?>
 				</div>
-				<li>f</li>
-				<li>t</li>
-				<li>g<sup>+</sup></li>
-				<li>yt</li>
-			</ul>
+				<div class="social">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-twitter-square"></i></a>
+					<a href="#"><i class="fab fa-google-plus-square"></i></a>
+				</div> <!--  .social -->
+			</div> <!--  .news-social -->
 			<div class="site-info">
+				<span>
+					
 				&copy; <?php echo "Copyright"; 
 						echo date("Y"); 
 						echo ' - ';
 						bloginfo( 'name' );
 						
 						 ?>
-				
+				</span>
 				<span>Designed and developed by Wappstars</span>
 			</div><!-- .site-info -->
 		</div><!--  .container -->

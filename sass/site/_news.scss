@@ -166,11 +166,6 @@
 		width: 100%;
 		margin-top: 30px;
 		margin-left: -60px;
-	   
-		a:hover, a:focus {
-	       border: 4px solid darken($green, 8%);
-	       text-decoration: none;
-	    }
 		> a {
 			display: inline-block;
 			color: darken($green, 6%);

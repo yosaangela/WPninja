@@ -2,48 +2,65 @@
 	padding: 4rem 0;
     margin-top: 0;
     color:white;
-    background-color:#151414;
-}
+    background-color: $main-gray;
 
-.social-media{    
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: right;
-	margin: 10px auto;
-	max-width: 1174px;
-	
-	.form-mail {
-		float: left;
-	}
-}
+    .news-social {
+    	@extend .clearfix;
+    	display: block;
+    	width: 100%;
+    	margin-bottom: 40px;
 
-/**
- * Style the list items.
- */
- .svg{
- 	margin: 2px;
- }
+    	.form-mail {
+    		width: 50%;
+    		float: left;
+    		@extend .form-group;
 
-.social-media li {
-	padding:  3px;
-	background-color: lighten($green, 2%);
-	display: inline-block;
-	font-size: 25px;
-	font-weight: 400;
-	text-align: center;
-	height: 50px;
-	width: 40px;
-	margin-right: 2px;
+    		input[type="email"] {
+    			@extend .form-control;
+    			width: 65%;
+    			float: left;
+    			border-radius: 0;
+    			border-top-left-radius: $bdrs;    		
+    			border-bottom-left-radius: $bdrs;    		
+    		}
+
+    		input[type="submit"] {
+    			@extend .btn;
+    			@extend .btn-success;
+    			border-radius: 0;
+    			border-top-right-radius: $bdrs;    		
+    			border-bottom-right-radius: $bdrs; 
+
+    			&:focus {
+    				box-shadow: none;
+    			}
+    		}
+    	}
+
+    	.social {
+    		width: 50%;
+    		float: right;
+    		text-align: right;
+
+    		a {
+
+    		font-size: 26px;
+    		color: $green;
+    		}
+    	}
+    }
 }
 
 .site-info {
-	padding: 20px 0;
+	padding: 35px 0;
 	font-size: 13px;
 	font-weight: 500;
 	span {
-		float: right;
+		&:first-of-type {
+			float: left;
+		}
+		&:last-of-type {
+			float: right;
+		}
 	}
 }
