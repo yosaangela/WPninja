@@ -64,48 +64,67 @@
 } //custom-menu
 
 #menu-overlay { 
+	padding: 40px;
 	overflow-y: auto;
 	display: inline-block;
 	visibility: hidden;
 	opacity: 0;
 	position: fixed;
 	height: auto;
-	width: 100%;//
-    position: fixed;//
+	width: 100%;
+    position: fixed;
 	// trbl
 	top: -20px;
 	right: 0;
 	bottom: 20px;
 	left: 0;
-	padding: 40px;
 	background-color: white;
 	z-index: 1001;
 	transition: all 350ms ease-in-out;
 	
-	img {
-	   width: 140px;
-		float: left;
-		margin-right: 40px;	
-		margin-top: -1rem;
-	}
+	.menu-in-overlay {
+	  padding: 0px 15px;
+	  position: fixed;
+	  top: 5px;
+	   img {
+	  	 width: 70%;
+	   }
 	
-	h3 {
-		color: darken($green, 8%);
+	   span {
+		font-size: large;
 		font-weight: 700;
-		padding: 2px;
-	}
-	h2 {
-		font-weight: 400;
-		font-size: 24px;
+		color: darken($green, 6%);
+		margin: 0 -20px;
+	   }
+	} // end.of.menu-in-overlay
+	.close-menu { 
+	    position: absolute;
+	    top: 30px;
+	    right: 30px;
+	    display: block;
+	    width: 30px;
+	    height: 30px;
+	    background-image: url(images/close.svg);
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    background-position: center center;
+	    z-index: 1001;
+	    cursor: pointer;
 	}
 
-	a:hover, a:focus {
-    color: white;
-    background-color: darken($green, 2%);
-    }
+	.close-menu:hover {
+		  transform: rotate(20deg);
+	}
+
+	h3 {
+		color: black;
+		font-weight: 700;
+		font-size: 18px;
+	}
 
 	// now the juice :))
 	&.menu-visible {
+		padding: 40px 30px;
 		visibility: visible;
 		opacity: 1;
 		top: 0;
@@ -120,9 +139,7 @@
 	.row {
         font-size: 2rem;
         font-weight: 500;
-	    margin-top: 4rem;
-	    margin-left: 4rem;	
-
+    	margin: 130px 200px;
 	}
 
 
@@ -144,27 +161,43 @@
 		   @include make-col(3);
 		}
 	}
-
-	.close-menu { // this one is first next child element
-	    position: absolute;
-	    top: 30px;
-	    right: 30px;
-	    display: block;
-	    width: 30px;
-	    height: 30px;
-	    background-image: url(images/close.svg);
-	    background-repeat: no-repeat;
-	    background-size: contain;
-	    background-position: center center;
-	    z-index: 1001;
-	    cursor: pointer;
-	}
-
 	a {
 		display: block;
 		color: darken($green, 8%);
-		text-decoration: none;
+		font-size: 20px;
+		
 	}
+	.search-section {
+		position: relative;
+		bottom: 8rem;
+		padding: 15px 75px;
+		padding-bottom: 160px;
+
+		#myInput {
+		  padding: 12px 20px 12px 40px;
+		  border: 1px solid darken($green, 6%);
+		  margin-bottom: 12px;
+		  width: 100%
+		}
+			
+		svg {
+			position: relative;
+    		float: left;
+			top: -50px;
+			width: 25px;
+			height: 25px;
+			left: 8px;
+		}
+	}
+	.btn-secondary {
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+		
+		&:hover {
+			background-color: lighten($green, 5%);
+		}
+	}
+
 }//end-of-menu-overlay
 
 

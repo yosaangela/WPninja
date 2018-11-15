@@ -62,25 +62,11 @@ add_filter( 'the_content_more_link', 'headlab_modify_read_more_link' );
 
 /**
 * Posts and pages featured image url
-* Called - E.g. background-image:url(<?php the_post_image(); ?>);
-*/
-// function the_post_image(){
-//     if (has_post_thumbnail()){
-//     $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-//     } else {
-//     $feat_image = get_template_directory_uri() . '/images/image-default.jpg';
-//     }
-//     echo $feat_image;
-// }
-//NEEDS TO BE CHECKED SOMETHING'S OFF
-
-/**
-* Posts and pages featured image url
 * Called - E.g. background-image:url(<?php echo get_post_image(2); ?>);
 */
 function get_post_image($id){
-    if (get_post_thumbnail_id($id)){
-    $feat_image = wp_get_attachment_url( get_post_thumbnail_id($id) );
+    if (has_post_thumbnail($id)){ //has_post_thumbnail() 
+    $feat_image = wp_get_attachment_url( get_post_thumbnail_id($id) ); //...._id($post->ID)
     } else {
     $feat_image = get_template_directory_uri() . '/images/image-default.jpg';
     }
@@ -170,9 +156,11 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'    => false
   ));
 
-    acf_add_options_sub_page(array(
-    'page_title'  => 'Theme Header Settings',
-    'menu_title'  => 'Social Media',
-    'parent_slug' => 'theme-settings',
-  ));  
+  
+
+  //   acf_add_options_sub_page(array(
+  //   'page_title'  => 'Theme Header Settings',
+  //   'menu_title'  => 'Social Media',
+  //   'parent_slug' => 'theme-settings',
+  // ));  
 }

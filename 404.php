@@ -28,7 +28,7 @@ get_header(); ?>
 								the_widget( 'WP_Widget_Recent_Posts' );
 
 								// Only show the widget if site has multiple categories.
-								if ( strappress_categorized_blog() ) :
+								// if ( strappress_categorized_blog() ) :
 							?>
 
 							<div class="widget widget_categories">
@@ -47,7 +47,7 @@ get_header(); ?>
 							</div><!-- .widget -->
 
 							<?php
-								endif;
+								// endif;
 
 								/* translators: %1$s: smiley */
 								$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'headlab' ), convert_smilies( ':)' ) ) . '</p>';

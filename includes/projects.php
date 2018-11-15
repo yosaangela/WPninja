@@ -1,15 +1,10 @@
-
 <div class="home-projects">
 	<?php 
-		$args = array('post_type' => 'project', 'posts_per_page' => 7);
+		$args = array('post_type' => 'project', 'posts_per_page' => 8);
 		$the_query = new WP_Query( $args ); ?>
 
 	<?php if ( $the_query->have_posts() ) : ?>
-
-		<a href="#" class="home-project">
-			<h2>ACF title</h2> 
-		</a>
-
+		
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 		<a class="home-project" href="<?php the_permalink(); ?>" style="background-image: url(<?php echo get_post_image($post->ID); ?>);">
@@ -22,6 +17,4 @@
 	<?php else : ?>
 		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 	<?php endif; ?>
-</div><!--.kolom -->
-
-
+</div> <!-- home-projects -->

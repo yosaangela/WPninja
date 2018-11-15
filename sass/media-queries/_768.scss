@@ -1,0 +1,35 @@
+ @media only screen and (max-width : 768px) {
+ 	// about-section
+	.about-section {
+	width: 100%;
+	padding: 20px;
+
+		h3 { 
+			font-size: 20px;
+	    	font-weight: 600;
+
+			span {
+				padding: 0px;
+			}
+		}	
+	
+    } //about-section
+
+
+
+    .home-project { 
+		width: 50%;
+		float: left;
+		height: 180px;
+
+		h2 {
+			width: 100%;
+			font-size: small;
+			font-weight: 600;
+			padding: 15px;
+		}
+	}
+
+
+
+} //media-queries

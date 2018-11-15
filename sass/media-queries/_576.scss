@@ -1,0 +1,14 @@
+ @media only screen and (max-width : 576px) {
+    .home-project { 
+		width: 50%;
+		float: left;
+		height: 180px;
+
+		h2 {
+			width: 100%;
+			font-size: small;
+			font-weight: 600;
+			padding: 15px;
+		}
+	}
+}

@@ -41,9 +41,12 @@
     		width: 50%;
     		float: right;
     		text-align: right;
+            svg{
+                height: 50px;
+                width: 50px;
+            }
 
     		a {
-
     		font-size: 26px;
     		color: $green;
     		}

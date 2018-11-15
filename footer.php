@@ -21,9 +21,10 @@
 				<?php  echo do_shortcode('[mc4wp_form id="1487"]');?>
 				</div>
 				<div class="social">
-					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-facebook-square"></i></a>
 					<a href="#"><i class="fab fa-twitter-square"></i></a>
 					<a href="#"><i class="fab fa-google-plus-square"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
 				</div> <!--  .social -->
 			</div> <!--  .news-social -->
 			<div class="site-info">

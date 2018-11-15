@@ -12,9 +12,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<?php if ( has_post_thumbnail() ) : ?>
+
 		<div class="post-thumbnail">
 		    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-		        <?php the_post_thumbnail('full', array('class' => 'rounded')); ?>
+		        <?php the_post_thumbnail(); ?>
 		    </a>
 		</div><!--  .post-thumbnail -->
 	<?php endif; ?>
@@ -33,7 +34,5 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php headlab_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

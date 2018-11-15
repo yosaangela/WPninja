@@ -36,24 +36,6 @@
 		}
 	}
 
-	&:first-of-type {
-		background-color: $green;
-		color: $white;
-
-		&:hover {
-			text-decoration: none;
-			background-color: darken($green, 2%);
-
-			h2 {
-				background-color: transparent;
-				color: $white;
-			}
-		}
-
-		&::after {
-			display: none;
-		}
-	}
 
 	&::after {
 		position: absolute;

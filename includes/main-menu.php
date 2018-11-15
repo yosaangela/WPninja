@@ -1,10 +1,11 @@
 <div id="menu-overlay" class="menu-overlay"> 
-	<?php the_custom_logo(); ?>
-	<h2><?php bloginfo('name'); ?> </h2>
+	<div class="menu-in-overlay">
+		<?php the_custom_logo(); ?>
+		<span><?php bloginfo('name'); ?> </span>
+	</div> <!--  .menu-in-overlay -->
 	<a class="close-menu"><span class="sr-only">Close menu</span></a>
-	<!-- no need for button tag everywhere, you can use <a> tag as well -->
 
-	<div class="container edge">
+	<div class="container-edge">
 		<div class="row">
 			<div class="main-menu">
 				<h3>Menu</h3>
@@ -24,7 +25,12 @@
 				<a href="#">Fucking CSS</a>
 				<a href="#">This is</a>
 				<a href="#">Just Example</a>
-			</div>
+			</div> 
 		</div>
+		
+		<div class="search-section">
+			<?php get_search_form(); ?>
+		</div> <!--  .search-section -->
+
 	</div>
 </div>
