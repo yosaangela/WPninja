@@ -171,3 +171,17 @@ article {
     width: 40%;
   }
 }
+
+/* For Error Page 404*/
+section {
+  .error-404 not-found {
+  width: 100%;
+  background-color: red;
+  }
+
+  .page-content {
+    box-sizing: border-box;
+    width: 100%;
+    color: black;
+  }
+}

@@ -7318,6 +7318,17 @@ article {
   article .post-thumbnail {
     width: 40%; }
 
+/* For Error Page 404*/
+section .error-404 not-found {
+  width: 100%;
+  background-color: red; }
+
+section .page-content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  color: black; }
+
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
@@ -7592,7 +7603,49 @@ article {
       padding: 1.5rem; }
       .about-section h3 span:last-child {
         border: none; }
+
+@-webkit-keyframes BounceEffect {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-300);
+            transform: translateY(-300); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); }
+  55% {
+    -webkit-transform: translate(-14px);
+            transform: translate(-14px); }
+  75% {
+    -webkit-transform: translate();
+            transform: translate(); }
+  100% {
+    opacity: 2;
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px); } }
+
+@keyframes BounceEffect {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-300);
+            transform: translateY(-300); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); }
+  55% {
+    -webkit-transform: translate(-14px);
+            transform: translate(-14px); }
+  75% {
+    -webkit-transform: translate();
+            transform: translate(); }
+  100% {
+    opacity: 2;
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px); } }
   .about-section .box-info {
+    -webkit-animation: BounceEffect, 4s, forwards;
+            animation: BounceEffect, 4s, forwards;
     background-color: #23923d;
     position: relative;
     margin: 0 auto;
@@ -7606,7 +7659,7 @@ article {
     .about-section .box-info::after {
       content: '';
       position: absolute;
-      /* down here for css triangle */
+      /* vcss bab daun hitamfi daerah mana? */
       width: 0;
       height: 0;
       border-left: 30px solid transparent;
@@ -7747,35 +7800,48 @@ article {
           width: 60px;
           height: 40px;
           float: right; }
-  .home-news-section .home-news-btn {
+  .home-news-section .wrapper-news-section {
+    display: block;
     width: 100%;
-    margin-top: 30px;
-    margin-left: -60px; }
-    .home-news-section .home-news-btn > a {
-      display: inline-block;
-      color: #228e3b;
-      padding: 10px 25px;
-      border: 1px solid #228e3b;
-      position: relative; }
-      .home-news-section .home-news-btn > a::after {
-        position: absolute;
-        content: '';
+    /* Button Scroll Up */ }
+    .home-news-section .wrapper-news-section .home-news-btn {
+      width: 100%;
+      margin-top: 30px;
+      margin-left: -60px; }
+      .home-news-section .wrapper-news-section .home-news-btn > a {
         display: inline-block;
-        height: 31px;
-        width: 50%;
-        top: -32px;
-        left: 4px;
-        z-index: 1; }
-      .home-news-section .home-news-btn > a::before {
-        position: absolute;
-        display: inline-block;
-        content: '';
-        height: 20px;
-        width: 1px;
-        border-left: 1px dashed #000;
-        top: -30px;
-        left: 40%;
-        z-index: 2; }
+        color: #228e3b;
+        padding: 10px 25px;
+        border: 1px solid #228e3b;
+        position: relative; }
+        .home-news-section .wrapper-news-section .home-news-btn > a::after {
+          position: absolute;
+          content: '';
+          display: inline-block;
+          height: 31px;
+          width: 50%;
+          top: -32px;
+          left: 4px;
+          z-index: 1; }
+        .home-news-section .wrapper-news-section .home-news-btn > a::before {
+          position: absolute;
+          display: inline-block;
+          content: '';
+          height: 20px;
+          width: 1px;
+          border-left: 1px dashed #000;
+          top: -30px;
+          left: 40%;
+          z-index: 2; }
+    .home-news-section .wrapper-news-section .button-up {
+      float: right;
+      position: relative;
+      top: -50px;
+      left: 15rem; }
+      .home-news-section .wrapper-news-section .button-up svg {
+        height: 20%;
+        width: 20%;
+        color: #228e3b; }
 
 /*--------------------------------------------------------------
 ## Projects

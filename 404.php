@@ -6,13 +6,12 @@
  *
  * @package HeadLabNeo
  */
+?>
 
-get_header(); ?>
-
-	<div class="container">
+<!-- 	<div class="container">
 		<div class="row">
 			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+				<main id="main" class="site-main" role="main"> -->
 
 					<section class="error-404 not-found">
 						<header class="page-header">
@@ -20,21 +19,21 @@ get_header(); ?>
 						</header><!-- .page-header -->
 
 						<div class="page-content">
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'headlab' ); ?></p>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'headlab' ). convert_smilies( ':)' ); ?></p>
 
 							<?php
-								get_search_form();
+								//get_search_form();
 
-								the_widget( 'WP_Widget_Recent_Posts' );
+								//the_widget( 'WP_Widget_Recent_Posts' );
 
 								// Only show the widget if site has multiple categories.
 								// if ( strappress_categorized_blog() ) :
 							?>
-
+<!-- 
 							<div class="widget widget_categories">
-								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'headlab' ); ?></h2>
+								<h2 class="widget-title"><!-?php esc_html_e( 'Most Used Categories', 'headlab' ); ?></h2>
 								<ul>
-								<?php
+								<!--?php
 									wp_list_categories( array(
 										'orderby'    => 'count',
 										'order'      => 'DESC',
@@ -44,9 +43,9 @@ get_header(); ?>
 									) );
 								?>
 								</ul>
-							</div><!-- .widget -->
+							</div><widget> -->
 
-							<?php
+							<!--?php
 								// endif;
 
 								/* translators: %1$s: smiley */
@@ -54,15 +53,15 @@ get_header(); ?>
 								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 								the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
+							?-->
 
 						</div><!-- .page-content -->
 					</section><!-- .error-404 -->
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
-		</div><!--  .row -->
-	</div><!--  .container -->
+<!-- 				</main><!-- #main -->
+			<!--/div>#primary
+		<!--/div>.row -->
+	<!--/div> .container -->
 
 <?php
-get_footer();
+

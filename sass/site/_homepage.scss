@@ -21,6 +21,7 @@
 			text-align: center;
 			float: left;
 			border-right: 2px solid $gray-200;
+			
 			padding: 1.5rem;
 
 			&:last-child {
@@ -29,8 +30,33 @@
 		}
 
 	}	
+	
+	@keyframes BounceEffect {
+		0% {
+			opacity: 0;
+			transform: translateY(-300);
+		}
+		40% {
+			opacity: 1;
+			transform: translate(0);
+		}
+		55% {
+			transform: translate(-14px);
+		}
+		75% {
+			transform: translate();
+		}
+
+		100% {
+			opacity: 2;
+			transform: translateY(-7px);
+		}
+	}
 
 	.box-info {
+		animation: BounceEffect, 4s, forwards; //animation name, duration, and fill-mode
+		// animation-iteration-count: infinite; 30%;
+
 		background-color: darken($green, 5%);
 		position: relative;
 		margin: 0 auto;
@@ -41,11 +67,10 @@
 		margin-top: 10%;
 		padding: 1.5em;
 		font-size: 1.1rem;
-		
 		&::after {
 			content: '';
 			position: absolute;
-			/* down here for css triangle */
+			/* vcss bab daun hitamfi daerah mana? */
 			width: 0; 
 			height: 0; 
 			border-left: 30px solid transparent;
@@ -53,7 +78,7 @@
 			border-top: 30px solid darken($green, 5%);
 			margin-top: 20px;
 			margin-left: -2rem;
-			// Nice solution for arrow.
+
 		}
 	}
 

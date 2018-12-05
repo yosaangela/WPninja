@@ -11,7 +11,7 @@ if( have_rows('slides') ):
 
         // display a sub field value
         $title = get_sub_field('slide_title');
-        $btn_txt = get_sub_field('button_text');
+        $content = get_sub_field('slider_content');
         $btn_link = get_sub_field('button_link');
         $img = get_sub_field('slide_image');
 
@@ -19,6 +19,7 @@ if( have_rows('slides') ):
         "
 		<div class='slide' style='background-image: url({$img["url"]})'>
 			<h2>{$title}</h2>
+            <p>{$content}</p>
 			<a href='{$btn_link}'>{$btn_txt}</a>
 		</div>
         ";

@@ -5,16 +5,15 @@
 				<?php 
 			  		$page_news = get_page_by_path('news');
 			  		$news_url = $page_news ? get_permalink($page_news): '';
-
-
-				$args = array(
-					'post_type' => 'post', 
-					'posts_per_page' => 3
-				);
-				$loop = new WP_Query( $args );
-				if($loop->have_posts()) :
-				while ( $loop->have_posts() ) : $loop->the_post();
-			    ?>	
+			  	
+			  	    $args = array(
+			  	    		'post_type' => 'post',
+			  	    		'posts_per_page' => 3
+			  	    		);
+			  	   	$loop = new WP_Query($args);
+			  	   	if ($loop->have_posts() ) :
+			  	   		while ($loop->have_posts() ) : $loop -> the_post(); ?>
+			  	 
 
 				<div class="home-news-item-wrapper">
 
@@ -41,11 +40,16 @@
 			<?php else : ?>
 				<p><?php esc_html_e( 'Sorry no post for now. Please come back later :)' ); ?></p>
 			<?php endif; ?>
-				
-			<div class="home-news-btn">
-				<a href="<?php echo $news_url ?>"><?php _e('Meer Nieuws', 'headlab'); ?></a> 
-			</div>
-		
+			
+			<div class="wrapper-news-section">	
+				<div class="home-news-btn">
+					<a href="<?php echo $news_url ?>"><?php _e('Meer Nieuws', 'headlab'); ?></a> 
+				</div>
+				<div class="button-up">
+					<i class="fas fa-caret-square-up"></i>
+				</div> <!--  .button-up -->
+			</div> <!--  .wrapper-news-section -->
+			
 		</div>
 	</div>
 </div>

@@ -7,7 +7,7 @@
 			 	// loop through the rows of data
 			    while ( have_rows('selling_points', 'option') ) : the_row(); ?>
 
-			      <span><?php  the_sub_field('selling__point__text', 'option');?></span>  
+			      <span><?php the_sub_field('selling__point__text', 'option');?></span>  
 
 			   <?php endwhile;
 

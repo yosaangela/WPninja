@@ -73,7 +73,6 @@ function get_post_image($id){
     return $feat_image;
 }
 
-
 /*
 * Custom menu output
 * No <ul>, no <li>, just <a>
@@ -147,7 +146,6 @@ function content($limit) {
 
 
 if( function_exists('acf_add_options_page') ) {
-  
   acf_add_options_page(array(
     'page_title'  => 'Theme General Settings',
     'menu_title'  => 'Theme Settings',
@@ -156,11 +154,9 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'    => false
   ));
 
-  
-
-  //   acf_add_options_sub_page(array(
-  //   'page_title'  => 'Theme Header Settings',
-  //   'menu_title'  => 'Social Media',
-  //   'parent_slug' => 'theme-settings',
-  // ));  
+    acf_add_options_sub_page(array(
+    'page_title'  => 'Theme Header Settings',
+    'menu_title'  => 'Social Media',
+    'parent_slug' => 'theme-settings',
+  ));  
 }
