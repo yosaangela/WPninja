@@ -160,3 +160,24 @@ if( function_exists('acf_add_options_page') ) {
     'parent_slug' => 'theme-settings',
   ));  
 }
+
+
+/* Promotion after header */
+
+add_action('__after_header', 'add_promotion_text');
+function add_promotion_text(){
+  //if we're on hompepage output promotion text
+  if(!is_front_page()) {
+    return;
+  } else {
+      echo "<div>hi, grab 2 to get disc. up to 80%!!</div>";
+  }
+}
+
+//change the link destination; to apply in the html page: apply_filters
+add_filter('tc_link_refers', 'tc_link_destination');
+
+function tc_link_destination() {
+  return 'http://example.com';
+}
+

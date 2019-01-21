@@ -18,7 +18,7 @@
 			</div><!--  .post-thumbnail -->
 
 		<?php endif; ?>
-
+	
 		<div class="about-container">
 			<h2 class="about-title"><?php the_title(); ?></h2>
 			<div class="about-content">

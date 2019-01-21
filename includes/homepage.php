@@ -10,11 +10,8 @@
 			      <span><?php the_sub_field('selling__point__text', 'option');?></span>  
 
 			   <?php endwhile;
-
 			else :
-
 			    // no rows found
-
 			endif;?>
 
 		</h3> 
@@ -23,8 +20,8 @@
 			</p>
 		</div>
 		<div class="end-of-about-section"><!-- be more specific if you dont't want to reuse class -->
-			<h2>Muller</h2>
-			<a href="#">Less meer</a>
+			<a href=".flip-box"><h2 class="more">Muller</h2></a>
+			<a >Less meer</a>
 		</div>
 	</div>
 

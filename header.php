@@ -45,10 +45,10 @@
 
 		</div><!-- custom menu-->
 	</header><!-- #masthead -->
-
+	<!--?php do_action('__after_header'); ?--> 
 	<div id="content" class="site-content">
 	<?php 
-	(is_front_page() || is_page(1086) /* About us */) ? $container = 'container-fluid' : $container = 'container-fluid'; ///:)))
+	(is_front_page() || is_page(1086) /*About us page */ || is_single()) ? $container = 'container-fluid' : $container = 'container';
 	?>
 
 	<div class="<?php echo $container;?>">

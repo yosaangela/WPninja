@@ -20,7 +20,7 @@ if( have_rows('slides') ):
 		<div class='slide' style='background-image: url({$img["url"]})'>
 			<h2>{$title}</h2>
             <p>{$content}</p>
-			<a href='{$btn_link}'>{$btn_txt}</a>
+            <a href='{btn_link}'></a>
 		</div>
         ";
 

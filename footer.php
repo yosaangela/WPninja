@@ -8,14 +8,13 @@
  *
  * @package HeadLabNeo
  */
-
 ?>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="container full">
 			<div class="news-social">
 				<div class="form-mail">
 				<?php  echo do_shortcode('[mc4wp_form id="1487"]');?>

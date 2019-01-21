@@ -1,4 +1,4 @@
-<div class="home-news-section">
+<div class="home-news-section" data-aos="slide-up">
 	<div class="container">
 		<div class="row">
 		   <h2 class="subtitle"><span>Nieuws</span></h2>
@@ -18,7 +18,7 @@
 				<div class="home-news-item-wrapper">
 
 					<div class="home-news-item">
-						<div class="home-news-item-image">
+						<div class="home-news-item-image" id="home_item_image">
 							<?php the_post_thumbnail();?>
 							 <span class="post-info"><?php the_time('j F Y' );?></span>
 						</div>
@@ -34,6 +34,7 @@
 				</div> <!-- /.home-news-item-wrapper end -->
 
 			<?php endwhile; ?>
+			
 
 				<?php wp_reset_postdata(); ?>
 

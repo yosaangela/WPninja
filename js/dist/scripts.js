@@ -6364,7 +6364,6 @@ jQuery(document).ready(function($){
 	 	$('#menu-overlay').removeClass('menu-visible');
 	});
 
-
 });
 
 

@@ -18,6 +18,16 @@ jQuery(document).ready(function($){
 	 	$('#menu-overlay').removeClass('menu-visible');
 	});
 
+	$('#home_item_image').onclick(function {
+		var $this = $(this);
+		$this.remove();
+	});
+
+	/*  Animation On scroll */
+
+	AOS.init({
+		duration: 1200
+	});
 
 });
 

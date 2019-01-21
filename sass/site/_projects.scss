@@ -55,7 +55,7 @@
 		font-size: 1.1rem;
 		font-weight: 600;
 		padding: 30px;
-		border-radius: $bdrs;
+		border-radius: $bdrs; //bdrs = 2pixel; 
 		text-align: center;
 		transition: $trans;
 	}
